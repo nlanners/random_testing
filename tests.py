@@ -8,7 +8,7 @@ class TestCase(unittest.TestCase):
     def test1(self):
         # Visa prefix
         # 16 digit
-        for test in range(10000):
+        for test in range(50000):
             credit_card_validator(random.randint(4000000000000000, 4999999999999999))
 
     def test2(self):
@@ -33,6 +33,15 @@ class TestCase(unittest.TestCase):
         for test in range(10000):
             credit_card_validator(random.randint(2221000000000000, 2720999999999999))
 
+    def test4(self):
+        # random prefixes
+        # 16 digit
+        for test in range(10000):
+            credit_card_validator(random.randint(1000000000000000, 9999999999999999))
+
+        # 15 digit
+        for test in range(10000):
+            credit_card_validator(random.randint(100000000000000, 999999999999999))
 
 if __name__ == '__main__':
     unittest.main()
