@@ -43,5 +43,6 @@ class TestCase(unittest.TestCase):
         for test in range(10000):
             credit_card_validator(random.randint(100000000000000, 999999999999999))
 
+
 if __name__ == '__main__':
     unittest.main()
