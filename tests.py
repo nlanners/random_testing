@@ -7,7 +7,7 @@ from credit_card_validator import credit_card_validator
 class TestCase(unittest.TestCase):
 
     def test1(self):
-        for test in range(100):
+        for test in range(1000):
             num = [4]
             for i in range(0, 13):
                 num.append(random.randint(0, 9))
