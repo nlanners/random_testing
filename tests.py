@@ -15,11 +15,11 @@ class TestCase(unittest.TestCase):
         # AmEx prefixes
         # 15 digit
         # 34
-        for test in range(10000):
+        for test in range(1000):
             credit_card_validator(random.randint(340000000000000, 349999999999999))
 
         # 37
-        for test in range(10000):
+        for test in range(1000):
             credit_card_validator(random.randint(370000000000000, 379999999999999))
 
     def test3(self):
@@ -36,11 +36,11 @@ class TestCase(unittest.TestCase):
     def test4(self):
         # random prefixes
         # 16 digit
-        for test in range(10000):
+        for test in range(1000):
             credit_card_validator(random.randint(1000000000000000, 9999999999999999))
 
         # 15 digit
-        for test in range(10000):
+        for test in range(1000):
             credit_card_validator(random.randint(100000000000000, 999999999999999))
 
 
