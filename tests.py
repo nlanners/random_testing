@@ -16,8 +16,9 @@ class TestCase(unittest.TestCase):
         #     string_num = ''.join(str(n) for n in num)
         #     credit_card_validator(string_num)
 
-        for test in range(10000):
+        for test in range(1000000):
             credit_card_validator(random.randint(1000000000000000, 9999999999999999))
+
 
 def gen_check_bit(num):
     modified_num = []
