@@ -7,15 +7,17 @@ from credit_card_validator import credit_card_validator
 class TestCase(unittest.TestCase):
 
     def test1(self):
-        for test in range(1000):
-            num = [4]
-            for i in range(0, 14):
-                num.append(random.randint(0, 9))
-            num.append(gen_check_bit(num))
+        # for test in range(1000):
+        #     num = [4]
+        #     for i in range(0, 15):
+        #         num.append(random.randint(0, 9))
+        #     #num.append(gen_check_bit(num))
+        #
+        #     string_num = ''.join(str(n) for n in num)
+        #     credit_card_validator(string_num)
 
-            string_num = ''.join(str(n) for n in num)
-            credit_card_validator(string_num)
-
+        for test in range(10000):
+            credit_card_validator(random.randint(1000000000000000, 9999999999999999))
 
 def gen_check_bit(num):
     modified_num = []
