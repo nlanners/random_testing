@@ -6,13 +6,14 @@ import random
 class TestCase(unittest.TestCase):
 
     def test1(self):
-        num = [4]
-        for i in range(0,13):
-            num.append(random.randint(0, 9))
-        num.append(gen_check_bit(num))
+        for test in range(100):
+            num = [4]
+            for i in range(0, 13):
+                num.append(random.randint(0, 9))
+            num.append(gen_check_bit(num))
 
-        string_num = ''.join(str(n) for n in num)
-        credit_card_validator(string_num)
+            string_num = ''.join(str(n) for n in num)
+            credit_card_validator(string_num)
 
 
 def gen_check_bit(num):
